@@ -185,13 +185,65 @@ section {
             .social-media-buttons {
                 display: flex;
                 gap: 18px;
-            }       
+            }   
+
+            .title-cat{
+                text-align: left;
+            }
+            
+            
+            .container {
+                            max-width: 1200px;
+                            margin: 0 auto;
+                            padding: 20px;
+                          }
+                        
+                          h1 {
+                            text-align: center;
+                            margin-bottom: 30px;
+                          }
+                        
+                          .category-container {
+                            display: flex;
+                            justify-content: center;
+                           
+
+                          }
+                        
+                          .category {
+                            width: 600px;
+                            height: 200px;
+                            margin: 10px;
+                            border: 1px solid #ccc;
+                            border-radius: 15px;
+                            overflow: hidden;
+                            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                          }
+                        
+                          .category img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit:cover;
+                           
+                            
+                          }
+                        
+                          .category h2 {
+                            text-align: center;
+                            margin: 10px 0;
+                            color: black;
+                          }
+
+
             footer {
                 clear:both;
                 width:100%;
                 height:60px;
                 background-color:rgb(153,153,153);
             }
+
+
+
 
         </style>
 
@@ -235,22 +287,31 @@ section {
                         </h1>
     
         
-                        <div id="cta_buttons">
-                            <a href="#" class="btn-default">
-                                Ver cardápio
-                            </a>
-        
-                            <a href="tel:+55555555555" id="phone_button">
-                                <button class="btn-default">
-                                    <i class="fa-solid fa-phone"></i>
-                                </button>
-                                (51) 92342-3243
-                            </a>
-                        </div>
-
                         <h1 class="title-cat">
                      Categorias
                     </h1>
+
+                     
+                    <div class="container">
+                       
+                        
+                        <div class="category-container">
+                          <div class="category">
+                            <img src="imagens/ifood falso.png" alt="Categoria 1">
+                            <h2>Restaurantes</h2>
+                          </div>
+                          <div class="category">
+                            <img src="https://via.placeholder.com/200x150" alt="Categoria 2">
+                            <h2>Categoria 2</h2>
+                          </div>
+                          <div class="category">
+                            <img src="https://via.placeholder.com/200x150" alt="Categoria 3">
+                            <h2>Categoria 3</h2>
+                          </div>
+                          <!-- Adicione mais categorias conforme necessário -->
+                        </div>
+                      </div>
+                      
 
 
         
