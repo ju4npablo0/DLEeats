@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #131313;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 350px;
+        margin: 100px auto;
+        padding: 30px;
+        background-color: #e0dae0;
+        border-radius: 5px;
+        box-shadow: 0 0 15px rgb(255, 223, 223);
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 48px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    label {
+        margin-bottom: 10px;
+    }
+    
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    select {
+        padding: 8px;
+        margin-bottom: 20px;
+        border-radius: 7px;
+        border: 1px solid #000000;
+    }
+    
+    input[type="submit"] {
+        padding: 15px;
+        background-color: #270252;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro</h2>
+        <form action="#" method="POST">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="telefone">Número de Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <label for="localizacao">Localização:</label>
+            <input type="text" id="localizacao" name="localizacao" required>
+
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo">
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+            </select>
+
+            <input type="submit" value="Cadastrar">
+        </form>
+    </div>
+</body>
+</html>
