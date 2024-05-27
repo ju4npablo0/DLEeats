@@ -155,20 +155,22 @@ section {
                         
                           .category-container {
                             display: flex;
-                            justify-content: center;
-                           
+                            overflow-x: hidden;
+                            scroll-snap-type: x mandatory;
+                            white-space: nowrap; /* Impede que as categorias quebrem para a próxima linha */
+                            }
 
-                          }
-                        
-                          .category {
-                            width: 600px;
+                            .category {
+                            flex-shrink: 0; /* Evita que as categorias encolham para caber */
+                            width: 400px;
                             height: 200px;
                             margin: 10px;
                             border: 1px solid #ccc;
                             border-radius: 15px;
                             overflow: hidden;
                             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-                          }
+                            scroll-snap-align: start; /* Garante que cada categoria comece na borda do contêiner */
+                            }
                         
                           .category img {
                             width: 100%;
@@ -209,6 +211,47 @@ section {
 
             }
 
+            .popup {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%; 
+  height: 60%; 
+  max-width: 600px; 
+  max-height: 400px; 
+  background-color: white
+}
+
+
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center; /* Centralizar conteúdo horizontalmente */
+}
+
+.popup-content * {
+  margin: 0 auto; /* Centralizar elementos filhos horizontalmente */
+}
+      
+.login{
+  background-color: transparent;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Central
+
 
 
 
@@ -234,8 +277,8 @@ section {
                         </li>
                     </ul>
         
-                    <button class="btn-default">
-                       <a href="login.html"> Login</a>
+                    <button id="openPopup" class="btn-default">
+                       <a>  Login</a>
                     </button>
         
                 
@@ -259,12 +302,12 @@ section {
                     </h1>
 
                      
-                    <div class="container">
-                       
-                        
+                   <div class="container">
+
+
                         <div class="category-container">
                           <div class="category">
-                            <img src="imagens/ifood falso.png" alt="Categoria 1">
+                            <img sr="imagens/ifood falso.png" alt="Categoria 1">
                             <h2>Restaurantes</h2>
                           </div>
                           <div class="category">
@@ -275,10 +318,36 @@ section {
                             <img src="https://via.placeholder.com/200x150" alt="Categoria 3">
                             <h2>Categoria 3</h2>
                           </div>
-                          <!-- Adicione mais categorias conforme necessário -->
+                          <div class="category">
+                            <img src="https://via.placeholder.com/200x150" alt="Categoria 3">
+                            <h2>Categoria 4</h2>
+                          </div>
+                          <div class="category">
+                            <img src="https://via.placeholder.com/200x150" alt="Categoria 3">
+                            <h2>Categoria 5</h2>
+                          </div>
+                          <div class="category">
+                            <img src="https://via.placeholder.com/200x150" alt="Categoria 3">
+                            <h2>Categoria 6</h2>
+                          </div>
+                          
                         </div>
                       </div>
                       
+                      <div id="popup"class="popup">
+                        
+                        <div class="login">
+        <h1>Cadastre-se</h1>
+        <input type="text" placeholder="Email">
+
+        <br><br>
+        <input type="password" placeholder="Senha">
+        <br><br>
+        <button>Login</button>
+        <button><a href="cadastrocliente.html"></a></button>
+                        </div>
+
+    </div>
 
 
         
@@ -321,5 +390,52 @@ section {
 
             </footer>
         </main>
+
+        <script>
+            document.getElementById('openPopup').addEventListener('click', function(){
+              document.getElementById('popup').style.display = 'block';
+            });
+            
+            document.getElementById('closePopup').addEventListener('click', function(){
+              document.getElementById('popup').style.display = 'none';
+            });
+            </script>
+
+            <script>
+        // Seleciona a container de categorias
+        const categoryContainer = document.querySelector('.category-container');
+        
+        // Variáveis para controle do movimento do mouse
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        // Adiciona evento de clique do mouse nas categorias
+        categoryContainer.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - categoryContainer.offsetLeft;
+            scrollLeft = categoryContainer.scrollLeft;
+        });
+
+        // Adiciona evento quando o mouse deixa a área da container de categorias
+        categoryContainer.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+
+        // Adiciona evento quando o botão do mouse é solto
+        categoryContainer.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+
+        // Adiciona evento de movimento do mouse nas categorias
+        categoryContainer.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - categoryContainer.offsetLeft;
+            const walk = (x - startX) * 5; // Ajuste a velocidade de deslizamento conforme necessário
+            categoryContainer.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+
     </body>
 </html>
