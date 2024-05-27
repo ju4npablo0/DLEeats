@@ -75,6 +75,13 @@ section {
                 border-bottom: 3px solid var(--color-primary-4);
             }
 
+            .searchBar{
+                background-color;:purple
+                border-radius: 12px;
+
+
+            }
+
            
 
             #home {
@@ -155,10 +162,16 @@ section {
                         
                           .category-container {
                             display: flex;
-                            overflow-x: hidden;
+                            overflow-x: hidden; /* Altere de hidden para auto para permitir a rolagem automática */
                             scroll-snap-type: x mandatory;
                             white-space: nowrap; /* Impede que as categorias quebrem para a próxima linha */
-                            }
+                            animation: slide 20s linear infinite; /* Adicione uma animação chamada slide */
+                        }
+
+                        @keyframes slide {
+                            0% { transform: translateX(0); } /* Comece a animação com a posição inicial */
+                            100% { transform: translateX(-100%); } /* Termine a animação com a posição final */
+                        }
 
                             .category {
                             flex-shrink: 0; /* Evita que as categorias encolham para caber */
@@ -175,7 +188,8 @@ section {
                           .category img {
                             width: 100%;
                             height: 100%;
-                            object-fit:cover;
+                            object-fit:center;
+
                            
                             
                           }
@@ -253,6 +267,59 @@ section {
   text-align: center; /* Central
 
 
+   .contaner {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .restaurant-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    
+    .restaurant {
+      width: 30%;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(82, 20, 255, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .restaurant img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .restaurant h2 {
+      text-align: center;
+      margin: 10px 0;
+    }
+    
+    .restaurant p {
+      padding: 0 10px;
+    }
+    
+    .restaurant a {
+      display: block;
+      text-align: center;
+      background-color: #4a04ce;
+      color: #fff;
+      padding: 10px 0;
+      text-decoration: none;
+    }
+    
+    .restaurant a:hover {
+      background-color: #4200dd;
+    }
+
+
 
 
         </style>
@@ -276,6 +343,8 @@ section {
                             <a href="#testimonials">Avaliações</a>
                         </li>
                     </ul>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" class="searchBar" placeholder="Pesquisar">
         
                     <button id="openPopup" class="btn-default">
                        <a>  Login</a>
@@ -307,29 +376,18 @@ section {
 
                         <div class="category-container">
                           <div class="category">
-                            <img sr="imagens/ifood falso.png" alt="Categoria 1">
+                            <img src="imagens/doces.png" alt="Categoria 1">
                             <h2>Restaurantes</h2>
                           </div>
                           <div class="category">
-                            <img src="https://via.placeholder.com/200x150" alt="Categoria 2">
+                            <img src="imagens/bebidas.png" alt="Categoria 2">
                             <h2>Categoria 2</h2>
                           </div>
                           <div class="category">
-                            <img src="https://via.placeholder.com/200x150" alt="Categoria 3">
+                            <img src="imagens/lanches.png" alt="Categoria 3">
                             <h2>Categoria 3</h2>
                           </div>
-                          <div class="category">
-                            <img src="https://via.placeholder.com/200x150" alt="Categoria 3">
-                            <h2>Categoria 4</h2>
-                          </div>
-                          <div class="category">
-                            <img src="https://via.placeholder.com/200x150" alt="Categoria 3">
-                            <h2>Categoria 5</h2>
-                          </div>
-                          <div class="category">
-                            <img src="https://via.placeholder.com/200x150" alt="Categoria 3">
-                            <h2>Categoria 6</h2>
-                          </div>
+                
                           
                         </div>
                       </div>
@@ -349,6 +407,30 @@ section {
 
     </div>
 
+    <div class="contaner">
+    <h1> Famosos no DLE <i class="fa-solid fa-star"></i></h1>
+    <div class="restaurant-list">
+      <div class="restaurant">
+        <img src="imagens/burgerking.png" alt="Restaurante 1">
+        <h2>Restaurante 1</h2>
+        <p>Descrição do restaurante 1.</p>
+        <a href="#">Saiba mais</a>
+      </div>
+      <div class="restaurant">
+        <img src="restaurante2.jpg" alt="Restaurante 2">
+        <h2>Restaurante 2</h2>
+        <p>Descrição do restaurante 2.</p>
+        <a href="#">Saiba mais</a>
+      </div>
+      <div class="restaurant">
+        <img src="restaurante3.jpg" alt="Restaurante 3">
+        <h2>Restaurante 3</h2>
+        <p>Descrição do restaurante 3.</p>
+        <a href="#">Saiba mais</a>
+      </div>
+    </div>
+  </div>
+
 
         
                     <div id="banner">
@@ -357,9 +439,7 @@ section {
 
                     
 
-                </section>
-                <section id="home2">
-
+             
                   
 
 
@@ -401,39 +481,31 @@ section {
             });
             </script>
 
-            <script>
-        // Seleciona a container de categorias
-        const categoryContainer = document.querySelector('.category-container');
-        
-        // Variáveis para controle do movimento do mouse
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+             <script>
+        const categories = [
+            { name: "Restaurantes", image: "imagens/ifood falso.png" },
+            { name: "Categoria 2", image: "https://via.placeholder.com/200x150" },
+            { name: "Categoria 3", image: "https://via.placeholder.com/200x150" },
+        ];
 
-        // Adiciona evento de clique do mouse nas categorias
-        categoryContainer.addEventListener('mousedown', (e) => {
-            isDown = true;
-            startX = e.pageX - categoryContainer.offsetLeft;
-            scrollLeft = categoryContainer.scrollLeft;
-        });
+        // Container das categorias
+        const categoryContainer = document.getElementById('categoryContainer');
 
-        // Adiciona evento quando o mouse deixa a área da container de categorias
-        categoryContainer.addEventListener('mouseleave', () => {
-            isDown = false;
-        });
+        // Loop para criar as categorias
+        categories.forEach(category => {
+            const categoryDiv = document.createElement('div');
+            categoryDiv.classList.add('category');
 
-        // Adiciona evento quando o botão do mouse é solto
-        categoryContainer.addEventListener('mouseup', () => {
-            isDown = false;
-        });
+            const img = document.createElement('img');
+            img.src = category.image;
+            img.alt = category.name;
 
-        // Adiciona evento de movimento do mouse nas categorias
-        categoryContainer.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - categoryContainer.offsetLeft;
-            const walk = (x - startX) * 5; // Ajuste a velocidade de deslizamento conforme necessário
-            categoryContainer.scrollLeft = scrollLeft - walk;
+            const h2 = document.createElement('h2');
+            h2.textContent = category.name;
+
+            categoryDiv.appendChild(img);
+            categoryDiv.appendChild(h2);
+            categoryContainer.appendChild(categoryDiv);
         });
     </script>
 
