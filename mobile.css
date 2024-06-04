@@ -1,5 +1,5 @@
 header {
-    height: 320px;
+    height: 40px;
     margin-top: 70px;
 }
 
@@ -78,9 +78,34 @@ main section.pizzas, main section.centro, main section.direita {
 
  /* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
+
+  #cta {
+    width: 10%;
+    display: wrap;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+              }
+  
+              #cta .title {
+                  font-size: 4rem;
+                  color: plum;;
+              }
+  
+              #cta .title span {
+                  color: purple;
+              }
+
+
+  .container {
+    max-width: 200px;
+    margin: 0 auto;
+    margin-left: 50px;
+   
+  }
   .carousel-inner {
-    transition: none; 
-    
+    transition: none; /* Remover a transição para dispositivos móveis */
+  }
   .category img{
     max-width: 150px;
     height: 50px;
