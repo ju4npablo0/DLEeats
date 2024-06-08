@@ -1,172 +1,322 @@
-<!DOCTYPE>
+
+<!DOCTYPE html>
 <html lang="pt-br">
-  
-    <head>
-        <title>Dle eats</title>
-        <meta name="viewport" content="width=device-width">
-        <meta charset="utf-8">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
-        <link href="estilo.css"            rel="stylesheet"/>
-        <link href="mobile.css"            rel="stylesheet" media="screen and (min-width:300px) and (max-width:700px)">
-        <link href="desktop-grande.css"    rel="stylesheet">
-    </head>
-    <body>      
-        <nav>
-              <i class="fa-solid fa-burger" id="nav_logo"> Dleeats</i>
-            <ul id="menu-desktop">
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Meus pedidos</a></li>
-                <li><a href="cadastroempresa.html">Seja nosso parceiro</a></li>
-                <li><button onclick="openPopup()">Login</button></li>
+        <head>
+                <meta charset="UTF-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1.0"
+                />
+                <title>Dle eats</title>
+                <link rel="stylesheet" href="styles.css" />
+        </head>
+        <body>
+                <header>
+                        
+                                         
 
-              <li><a<i class="fa-solid fa-magnifying-glass"> <input type="text" class="searchBar" placeholder="Pesquisar"></i></a></li>
-            </ul> 
-            
-            <ul id="menu-mobile">
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Meus pedidos</a></li>
-                <li><a href="">Seja nosso parceiro</a></li>
-              <li> <a href="" >Login</a></li>
-              <li><i class="fa-solid fa-magnifying-glass"> <input type="text" class="searchBar" placeholder="Pesquisar"></i></li>
-            </ul> 
-            
-            <div id="menu-btn">
-                <svg width="30" height="30">
-                    <path d="M0,5 30,5"     stroke="#fff" stroke-width="4"/>
-                    <path d="M0,15 30,15"   stroke="#fff" stroke-width="4"/>
-                    <path d="M0,25 30,25"   stroke="#fff" stroke-width="4"/>
-                </svg>
-            </div>            
-        </nav>
-      
-      <div id="popup" class="popup">
-  <h2>Login</h2>
-  <form>
-    <input type="text" placeholder="Usuário" required>
-    <input type="password" placeholder="Senha" required>
-    <button type="submit">Entrar</button>
-  </form>
-   <a href="cadastrocliente.html">Não tem uma conta?</a>
-</div>
-        
-        <header>
-        
-        </header>
-        
-        <main>
-          <div id="cta">
-            <h1 class="title">
-                             O sabor que vai até
-                             <span>você</span>
-                         </h1>
-          
-          
-                        <h1 class="title-cat">
-                     Categorias
-                    </h1>
+                                        <div class="container-logo">
+                                                
+                                                <i class="fa-solid fa-burger"></i>
+                                                <h1 class="logo"><a href="/">Dle eats</a></h1>
+                                        </div>
 
+                                        <div class="container-user">
+                                          <a href="login.html"> <i class="fa-solid fa-user"></i></a>
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                                <div class="content-shopping-cart">
+                                                        <span class="text">Carrinho</span>
+                                                        
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
 
-          
-          <div class="container">
+                        <div class="container-navbar">
+                                <nav class="navbar container">
+                                        <i class="fa-solid fa-bars"></i>
+                                        <ul class="menu">
+                                                <li><a href="#">Inicio</a></li>
+                                                <li><a href="#">Categorias</a></li>
+                                                <li><a href="#">Promoçoes</a></li>
+                                                <li><a href="login.cliente">Login</a></li>
+                                        </ul>
+
+                                        <form class="search-form">
+                                                <input type="search" placeholder="Buscar..." />
+                                                <button class="btn-search">
+                                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                                </button>
+                                        </form>
+                                </nav>
+                        </div>
+                </header>
+
+                <section class="banner">
+                        <div class="content-banner">
+                                <h2>O sabor</h2>
+                                <h2>que vai<br />até você!!</h2>
+                                
+                        </div>
+                </section>
+
+                <main class="main-content">
+                  
+                
+                        
+                        <section class="container top-categories">
+                                <h1 class="heading-1">Categorias</h1>
+                          
+                          
+                          <div class="container">
   <div class="categories-carousel">
     <div class="carousel-inner">
       <div class="category">
-        <img src="imagens/doces.png" alt="Category 1">
+        <a href="doces.html"> 
+          <img src="imagens/doces.png" alt="Category 1">
+          
+        </a>
       </div>
       <div class="category">
+        <a href="bebidas.html">
         <img src="imagens/bebidas.png" alt="Category 2">
+        </a>
       </div>
       <div class="category">
+        <a href="lanches.html">
         <img src="imagens/lanches.png" alt="Category 3">
+        </a>
       </div>
       <div class="category">
+        <a href="doces.html">
         <img src="imagens/doces.png" alt="Category 1">
+        </a>
       </div>
       <div class="category">
+        <a href="bebidas">
         <img src="imagens/bebidas.png" alt="Category 2">
+        </a>
       </div>
       <div class="category">
+        <a href="lanches.html">
         <img src="imagens/lanches.png" alt="Category 3">
+        </a>
       </div>
       <!-- Add more categories as needed -->
     </div>
   </div>
 </div>
         </div>
-            
-      
-                        <h1 class="title-cat">
-                     Famosos no Dle
-                    </h1>
-      
-         <div class="container2">
+                          
+                          
+                          
+                          
+                          
+                                
+                        </section>
+
+                        <section class="container top-products">
+                                <h1 class="heading-1">Promoções</h1>
+
+                                
+
+                                <div class="container-products">
+                                        <!-- Producto 1 -->
+                                        <div class="card-product">
+                                                <div class="container-img">
+                                                        <img src="imagens/hamburge1.jpg" alt="whopper" />
+                                                        <span class="disconto">-13%</span>
+                                                        <div class="button-group">
+                                                                <span>
+                                                                        <i class="fa-regular fa-eye"></i>
+                                                                </span>
+                                                                <span>
+                                                                        <i class="fa-regular fa-heart"></i>
+                                                                </span>
+                                                                <span>
+                                                                        <i class="fa-solid fa-code-compare"></i>
+                                                                </span>
+                                                        </div>
+                                                </div>
+                                                <div class="content-card-product">
+                                                        <div class="stars">
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                        </div>
+                                               
+                                                        <h3>Combo whopper de plantas</h3>
+                                                        <span class="add-cart">
+                                                                <i class="fa-solid fa-basket-shopping"></i>
+                                                        </span>
+                                                        <p class="price">33,40R$ <span>$39,40</span></p>
+                                                </div>
+                                        </div>
+                                        <!-- Producto 2 -->
+                                        <div class="card-product">
+                                                <div class="container-img">
+                                                        <img
+                                                                src="imagens/hamburger2.jpg"
+                                                                alt="chicken"
+                                                        />
+                                                        <span class="disconto">-22%</span>
+                                                        <div class="button-group">
+                                                                <span>
+                                                                        <i class="fa-regular fa-eye"></i>
+                                                                </span>
+                                                                <span>
+                                                                        <i class="fa-regular fa-heart"></i>
+                                                                </span>
+                                                                <span>
+                                                                        <i class="fa-solid fa-code-compare"></i>
+                                                                </span>
+                                                        </div>
+                                                </div>
+                                                <div class="content-card-product">
+                                                        <div class="stars">
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-regular fa-star"></i>
+                                                                <i class="fa-regular fa-star"></i>
+                                                        </div>
+                                                        <h3>Combo Chicken crispy</h3>
+                                                        <span class="add-cart">
+                                                                <i class="fa-solid fa-basket-shopping"></i>
+                                                        </span>
+                                                        <p class="price">25,00R$ <span>40,00R$</span></p>
+                                                </div>
+                                        </div>
+                                        
+                        </section>
+
+       
+
+                        <section class="container specials">
+                                <h1 class="heading-1">Famosos no Dle<i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i>
+                                                                <i class="fa-solid fa-star"></i></h1>
+                          
+                          
+                          
+                          
+                          <div class="container2">
     <div class="restaurant-list">
       <div class="restaurant">
         
       
-        <img src="imagens/champs.png" alt="Champs">
+        <img src="imagens/champs.jpg" alt="Champs">
         <h2>Champs</h2>
         
-        <a href="Burgerking.html">Saiba mais</a>
+        <a href="#">Saiba mais</a>
       </div>
       <div class="restaurant">
-        <img src="imagens/tempvovo.png" alt="tem.Vovó">
-        <h2>Temp.Vovó</h2>
+        <img src="imagens/burgerking.jpg" alt="Champs">
+        <h2>Burger King</h2>
         
         <a href="#">Saiba mais</a>
       </div>
       <div class="restaurant">
-        <img src="imagens/chiquinho.png" alt="Chiquinho Sorvetes">
+        <img src="imagens/chiquinho.jpg" alt="Chiquinho Sorvetes">
         <h2>Chiquinho</h2>
         
         <a href="#">Saiba mais</a>
       </div>
       <div class="restaurant">
-        <img src="imagens/burgerking.png" alt="burgerking">
-        <h2>BurgerKing</h2>
-        
-        <a href="Burgerking.html">Saiba mais</a>
-      </div>
-      <div class="restaurant">
-        <img src="imagens/chiquinho.png" alt="Chiquinho Sorvetes">
-        <h2>Chiquinho</h2>
+        <img src="imagens/tempvovo.jpg" alt="Chiquinho Sorvetes">
+        <h2>Temp. Vovó</h2>
         
         <a href="#">Saiba mais</a>
       </div>
       <div class="restaurant">
-        <img src="imagens/chiquinho.png" alt="Chiquinho Sorvetes">
-        <h2>Chiquinho</h2>
+        <img src="imagens/pizzaria.png" alt="Chiquinho Sorvetes">
+        <h2>Pizzaria</h2>
         
         <a href="#">Saiba mais</a>
       </div>
     </div>
-  </div>
-      
-      
-          
-                         
-            </section>
-        </main>        
-        
-        <script src="jquery.js"></script>
-        <script>
-            $(function() {
-                $("div#menu-btn").click(function() {
-                    $("nav ul#menu-mobile").toggle();
-                });
+
                 
-                $(window).resize(function() {
-                   var largura = $(window).width(); 
-                    if ( largura >= 701 ) {
-                        $("nav ul#menu-mobile").hide();   
-                    }
-                });
-            });
-        </script>
-     <script>  
+                                                                
+                                                  
+                                             
+                        </section>
+                </main>
+
+                <footer class="footer">
+                        <div class="container container-footer">
+                                <div class="menu-footer">
+                                        <div class="contact-info">
+                                                <p class="title-footer">Informaações para contato</p>
+                                                <ul>
+                        
+                                                        </li>
+                                                        <li>Telefone: 55-(81)99999-9999</li>
+                                                        <li>EmaiL: Dleeats_suporte@gmail.com</li>
+                                                </ul>
+                                                <div class="social-icons">
+                                                        <span class="facebook">
+                                                                <i class="fa-brands fa-facebook-f"></i>
+                                                        </span>
+                                                        <span class="twitter">
+                                                                <i class="fa-brands fa-x"></i>
+                                                        </span>
+                                                        <span class="tiktok">
+                                                                <i class="fa-brands fa-tiktok"></i>
+                                                        </span>
+                                                        <span class="pinterest">
+                                                                <i class="fa-brands fa-pinterest-p"></i>
+                                                        </span>
+                                                        <span class="instagram">
+                                                                <i class="fa-brands fa-instagram"></i>
+                                                        </span>
+                                                </div>
+                                        </div>
+
+                                        
+
+                                        <div class="my-account">
+                                                <p class="title-footer">Minha conta</p>
+
+                                                <ul>
+                                                        <li><a href="#">Minha conta</a></li>
+                                                        <li><a href="#">Historico de pedidos</a></li>
+                                                        <li><a href="#">Reembolsos</a></li>
+                                                </ul>
+                                        </div>
+
+                                        <div class="newsletter">
+                                                <p class="title-footer">Quem somos nós?</p>
+
+                                                <div class="content">
+                                                        <p>
+                                                                Suscríbete a nuestros boletines ahora y mantente al
+                                                                día con nuevas colecciones y ofertas exclusivas.
+                                                        </p>
+                    
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="copyright">
+                                        <p>
+                                               3°A TDS; 2024
+                                        </p>
+
+                                        
+                                </div>
+                        </div>
+                </footer>
+
+                <script
+                        src="https://kit.fontawesome.com/81581fb069.js"
+                        crossorigin="anonymous"
+                ></script>
+
+ <script>  
   document.addEventListener('DOMContentLoaded', function() {
   const carouselInner = document.querySelector('.carousel-inner');
   const categories = document.querySelectorAll('.category');
@@ -193,21 +343,5 @@
 });
 
   </script>
-
-<script>
-  // Função para abrir a janela pop-up
-  function openPopup() {
-    document.getElementById("popup").style.display = "block";
-  }
-
-  // Função para fechar a janela pop-up quando o usuário clicar fora dela
-  window.onclick = function(event) {
-    var popup = document.getElementById("popup");
-    if (event.target == popup) {
-      popup.style.display = "none";
-    }
-  }
-</script>
-
-    </body>
+        </body>
 </html>
