@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+<link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+                         <div class="container-logo">
+                                                
+                                                <i class="fa-solid fa-burger"></i>
+                                                <h1 class="logo"><a href="/">Dle eats</a></h1>
+                                        </div>
+
+                                        <div class="container-user">
+                                          <a href="login.html"> <i class="fa-solid fa-user"></i></a>
+                                                <i class="fa-solid fa-basket-shopping"></i>
+                                                <div class="content-shopping-cart">
+                                                        <span class="text">Carrinho</span>
+                                                        
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <div class="container-navbar">
+                                <nav class="navbar container">
+                                        <i class="fa-solid fa-bars"></i>
+                                        <ul class="menu">
+                                                <li><a href="#">Inicio</a></li>
+                                                <li><a href="#">Categorias</a></li>
+                                                <li><a href="#">Promoçoes</a></li>
+                                                <li><a href="login.cliente">Login</a></li>
+                                        </ul>
+
+                                        <form class="search-form">
+                                                <input type="search" placeholder="Buscar..." />
+                                                <button class="btn-search">
+                                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                                </button>
+                                        </form>
+                                </nav>
+                        </div>
+    </header>
+    <main>
+      <div class="page-title">Seu Carrinho</div>
+      <div class="content">
+        <section>
+          <table>
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Total</th>
+                <th>-</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="product">
+                    <img src="https://picsum.photos/100/120" alt="" />
+                    <div class="info">
+                      <div class="name">Nome do produto</div>
+                      <div class="category">Categoria</div>
+                    </div>
+                  </div>
+                </td>
+                <td>R$ 120</td>
+                <td>
+                  <div class="qty">
+                    <button><i class="bx bx-minus"></i></button>
+                    <span>2</span>
+                    <button><i class="bx bx-plus"></i></button>
+                  </div>
+                </td>
+                <td>R$ 240</td>
+                <td>
+                  <button class="remove"><i class="bx bx-x"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="product">
+                    <img src="https://picsum.photos/100/120" alt="" />
+                    <div class="info">
+                      <div class="name">Nome do produto</div>
+                      <div class="category">Categoria</div>
+                    </div>
+                  </div>
+                </td>
+                <td>R$ 120</td>
+                <td>
+                  <div class="qty">
+                    <button><i class="bx bx-minus"></i></button>
+                    <span>2</span>
+                    <button><i class="bx bx-plus"></i></button>
+                  </div>
+                </td>
+                <td>R$ 240</td>
+                <td>
+                  <button class="remove"><i class="bx bx-x"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="product">
+                    <img src="https://picsum.photos/100/120" alt="" />
+                    <div class="info">
+                      <div class="name">Nome do produto</div>
+                      <div class="category">Categoria</div>
+                    </div>
+                  </div>
+                </td>
+                <td>R$ 120</td>
+                <td>
+                  <div class="qty">
+                    <button><i class="bx bx-minus"></i></button>
+                    <span>2</span>
+                    <button><i class="bx bx-plus"></i></button>
+                  </div>
+                </td>
+                <td>R$ 240</td>
+                <td>
+                  <button class="remove"><i class="bx bx-x"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <aside>
+          <div class="box">
+            <header>Resumo da compra</header>
+            <div class="info">
+              <div><span>Sub-total</span><span>R$ 418</span></div>
+              <div><span>Frete</span><span>Gratuito</span></div>
+              <div>
+                <button>
+                  Adicionar cupom de desconto
+                  <i class="bx bx-right-arrow-alt"></i>
+                </button>
+              </div>
+            </div>
+            <footer>
+              <span>Total</span>
+              <span>R$ 418</span>
+            </footer>
+          </div>
+          <button>Finalizar Compra</button>
+        </aside>
+      </div>
+    </main>
+    <footer class="footer">
+                        <div class="container container-footer">
+                                <div class="menu-footer">
+                                        <div class="contact-info">
+                                                <p class="title-footer">Informaações para contato</p>
+                                                <ul>
+                        
+                                                        </li>
+                                                        <li>Telefone: 55-(81)99999-9999</li>
+                                                        <li>EmaiL: Dleeats_suporte@gmail.com</li>
+                                                </ul>
+                                                <div class="social-icons">
+                                                        <span class="facebook">
+                                                                <i class="fa-brands fa-facebook-f"></i>
+                                                        </span>
+                                                        <span class="twitter">
+                                                                <i class="fa-brands fa-x"></i>
+                                                        </span>
+                                                        <span class="tiktok">
+                                                                <i class="fa-brands fa-tiktok"></i>
+                                                        </span>
+                                                        <span class="pinterest">
+                                                                <i class="fa-brands fa-pinterest-p"></i>
+                                                        </span>
+                                                        <span class="instagram">
+                                                                <i class="fa-brands fa-instagram"></i>
+                                                        </span>
+                                                </div>
+                                        </div>
+
+                                        
+
+                                        <div class="my-account">
+                                                <p class="title-footer">Minha conta</p>
+
+                                                <ul>
+                                                        <li><a href="#">Minha conta</a></li>
+                                                        <li><a href="#">Historico de pedidos</a></li>
+                                                        <li><a href="#">Reembolsos</a></li>
+                                                </ul>
+                                        </div>
+
+                                        <div class="newsletter">
+                                          <a href=""  ><p class="title-footer">Quem somos nós?</p></a>
+
+                                           
+                    
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="copyright">
+                                        <p>
+                                               3°A TDS; 2024
+                                        </p>
+
+                                        
+                                </div>
+                        </div>
+                </footer>
+  </body>
+</html>
