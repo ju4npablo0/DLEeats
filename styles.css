@@ -218,7 +218,7 @@ html {
 
 .content-banner h2 {
     color: plum;
-    font-size: 6.5rem;
+    font-size: 7.5rem;
     font-weight: 500;
     line-height: 1.2;
 }
@@ -259,8 +259,8 @@ margin-right: 20px;
 }
 
 .category img {
-max-width: 600px;
-height: 200px;
+max-width: 500px;
+height: 150px;
 }
 
 @media (max-width: 768px) {
